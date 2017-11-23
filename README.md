@@ -45,7 +45,8 @@
             There is also some timing issues to be aware of. You likely will not have the absolute most current data but it should always be less than 10 Minutes old.
             This comes from when the timing control gets fired, When the data was sent from the ESP8266 and when you loaded / refreshed the web page.
 
-            Linux users may have to change ownwership of the USB port to communicate with the /dev/ttyUSB0 as in 'sudo chown yourusername /dev/ttyUSB0' or what ever you selected as your port in setup.
+            Linux users may have to change ownwership of the USB port to communicate with the /dev/ttyUSB0
+            as in 'sudo chown yourusername /dev/ttyUSB0' or what ever you selected as your port in setup.
             
 
     Get the .ino & .HTML code files here https://github.com/optio50/ESP8266-NodeMCU-12E-with-BME280
