@@ -1,4 +1,4 @@
- Fancy Gauges & Chart for the ESP8266 With BME280 Sensor
+ **Fancy Gauges & Chart for the ESP8266 With BME280 Sensor**
  ![ScreenShot](https://github.com/optio50/ESP8266-NodeMCU-12E-with-BME280/blob/master/1%20Week%20Chart.png?raw=true "1 Week Chart")
  
  1. Create a free Thingspeak account and new channel at https://thingspeak.com , Maybe call the channel something like "ESP8266-NodeMCU-12E-BME280"
