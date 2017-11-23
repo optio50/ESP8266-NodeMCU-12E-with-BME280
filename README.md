@@ -1,3 +1,6 @@
+ Fancy Gauges & Chart for the ESP8266 With BME820 Sensor
+ ![ScreenShot](https://github.com/optio50/ESP8266-NodeMCU-12E-with-BME280/24%20Hr%20Chart.png?raw=true "Optional Title")
+ 
  1. Create a free Thingspeak account and new channel at https://thingspeak.com , Maybe call the channel something like "ESP8266-NodeMCU-12E-BME280"
  2. The new channel should have 3 fields named Temperature Humidity Pressure in that specific order.
  3. Take note of your new "channel ID" XXXXXX under "Channel Settings"
