@@ -1,0 +1,31 @@
+% Daily max and min temperature, humidity and pressure written to another channel (fields 1 to 6) for later display in Google chart. Read channel must be public.
+readChannelID = XXXXXX
+writeNewChannelID = XXXXXX
+writeAPIKey = 'XXXXXXXXXXXXXXX'
+% Define date range (i.e. since midnight)
+Tend = datetime('now')
+Tstart = datetime('today')
+% Read the Temp data from Field1 since midnight
+[Temp, time] = thingSpeakRead(readChannelID,'DateRange', [Tstart,Tend], 'Fields', [1]);
+Tmax = max(Temp); % Get daily Max
+Tmin = min(Temp); % Get daily Min
+% Read the Humidity data from Field2 since midnight
+[Humidity, time] = thingSpeakRead(readChannelID,'DateRange', [Tstart, Tend], 'Fields', [2]);
+Hmax = max(Humidity); % Get daily Max
+Hmin = min(Humidity); % Get daily Min
+% Read the Pressure data from Field3 since midnight
+[Pressure, time] = thingSpeakRead(readChannelID,'DateRange', [Tstart, Tend], 'Fields', [3]);
+Pmax = max(Pressure); % Get daily Max
+Pmin = min(Pressure); % Get daily Min
+% display results to test
+display(Tmax, 'T_max'), display(Tmin, 'T_min')
+display(Hmax, 'H_max'), display(Hmin, 'H_min')
+display(Pmax, 'P_max'), display(Hmin, 'P_min')
+% Write data to a new channel
+Tmax = sprintf('%.1f',Tmax)
+Tmin = sprintf('%.1f',Tmin)
+Hmax = sprintf('%.1f',Hmax)
+Hmin = sprintf('%.1f',Hmin)
+Pmax = sprintf('%.2f',Pmax)
+Pmin = sprintf('%.2f',Pmin)
+thingSpeakWrite(writeNewChannelID,'Fields',[1,2,3,4,5,6],'Values',{Tmax,Tmin,Hmax,Hmin,Pmax,Pmin}, 'Writekey', writeAPIKey);
