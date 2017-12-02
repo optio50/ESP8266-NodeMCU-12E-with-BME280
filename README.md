@@ -33,7 +33,7 @@
     As in -5 for me. All the values must be inside the provided single quotes 'XXXXX'. Save and exit the text editor.
 
 17. Next we will program the ESP8266. Connect a USB cable between you ESP8266 and your computer.
-    Load the provided New_BME_Sensor.ino file into the Arduino IDE. 
+    Load the provided New_BME_Sensor.ino file into the Arduino IDE. Your BME280 sensor should be hooked to D3 (SDA) & D4 (SCL) on the ESP8266.
     Enter your "ESP8266-NodeMCU-12E-BME280" "Write Key" "Wireless SSID" & "Password" into the correct section of the sketch.
     Then click menu item "Sketch" &  "Upload". After you upload the sketch to your ESP8266 you can open the serial window and see your data print out after 5 Minutes, every 5 Minutes.
     The data gets sent to thingspeak at 5 min intervals so it will be some time before you have meaningful chart data but you should have gauge readings after 5 min.
