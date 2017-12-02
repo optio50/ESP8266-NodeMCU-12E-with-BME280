@@ -17,11 +17,11 @@ char pressureInchString[6];
 
 Adafruit_BME280 bme; // I2C
 // replace with your channel’s thingspeak API write key,
-String apiKey = "MZKW8VSNDF2SINB7";
+String apiKey = "XXXXXXXXXXXXXXXXX";
 // replace with your routers SSID
-const char* ssid = "Connection Disabled";
+const char* ssid = "XXXXXXXXXXXXXXXXX";
 // replace with your routers password
-const char* password = "Wireless#18016";
+const char* password = "XXXXXXXXXXXXXXX";
 
 const char* server = "api.thingspeak.com";
 WiFiClient client;
@@ -35,7 +35,7 @@ void setup() {
   // Initializing serial port for debugging purposes
   Serial.begin(115200);
   delay(10);
-  Wire.begin(D3, D4);
+  Wire.begin(D3, D4); // Make sure you have D3 & D4 hooked up to the BME280
   Wire.setClock(100000);
   // Connecting to WiFi network
   Serial.println();
