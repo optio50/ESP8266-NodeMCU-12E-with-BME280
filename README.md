@@ -19,21 +19,28 @@
     Select Minute under Recurrence. Set to run every 5 Minutes. Action should be MATLAB Analysis and "Code to Execute" is "Calculate Min Max Since Midnight".
     Save TimeControl.
 12. Follow the instructions for installing the Arduino IDE & ESP8266 core at http://easy-esp.com/getting-started-with-easyesp-1-using-arduino-ide/
-13. You will also need the "Adafruit Unified Sensor Driver" library at https://github.com/adafruit/Adafruit_Sensor place it in the /Arduino/libraries folder
+13. You will need the "Adafruit Unified Sensor Driver" library at https://github.com/adafruit/Adafruit_Sensor place it in the /Arduino/libraries folder
     or you may find it in the "Library Manager" in Arduino IDE.
 14. In addition, you will also require the "Adafruit BME280 Library" from here https://github.com/adafruit/Adafruit_BME280_Library
     or you may find it in the "Library Manager" in Arduino IDE.
-15. The I2C address for BME280 is hardcoded in the Adafruit_BME280.h file (look for the line #define BME280_ADDRESS  0x77) inside the Adafruit_BME280_Library folder.
+
+15. One more library, Wire.h https://github.com/esp8266/Arduino/tree/master/libraries/Wire or you may find it in the "Library Manager" in Arduino IDE.
+
+16. The I2C address for BME280 is hardcoded in the Adafruit_BME280.h file (look for the line #define BME280_ADDRESS  0x77) inside the Adafruit_BME280_Library folder.
     Adafruit’s BME sensor modules are hard-wired to use the I2C address of 0x77. But the BME280 can have a slightly different I2C address (0x76) if its external SDO pin is grounded.
     If you are using the sensor modules from a third party, it is likely that it’s address would not match with the default value in the Adafruit library.
     For example, for most of the BME280 sensor modules available on eBay or Aliexpress have their I2C address to be 0x76.
     If you dont get a response from the sensor using the default address set in the Adafruit_BME280.h file, you might need to change it to 0x76.
-16. Open the provided ESP8266-NodeMCU-12E-BME280.html file in a text editor and enter your "ESP8266-NodeMCU-12E-BME280" "Channel ID" & "Read API Key" for the variables key1 & chan1
+
+    BME280 & NodeMCU12 Connection Points (Using the Wire.h Library). NodeMCU 3.3V to BME280 Vin,  NodeMCU GND to BME280 GND, NodeMCU D4 to BME280 SCL, NodeMCU D3 to BME280 SDA.
+	D2 and D1 are NodeMCU's default pins for SDA and SCL if not using "Wire.h"
+
+17. Open the provided ESP8266-NodeMCU-12E-BME280.html file in a text editor and enter your "ESP8266-NodeMCU-12E-BME280" "Channel ID" & "Read API Key" for the variables key1 & chan1
     Also enter the "Read API Key" and "Channel ID" for "BME280 Daily High Low Data" for key2 and chan2. In addition, enter your timezone offset from UTC.
     As in -5 for me. All the values must be inside the provided single quotes 'XXXXX'. Save and exit the text editor.
 
-17. Next we will program the ESP8266. Connect a USB cable between you ESP8266 and your computer.
-    Load the provided New_BME_Sensor.ino file into the Arduino IDE. Your BME280 sensor should be hooked to D3 (SDA) & D4 (SCL) on the ESP8266.
+18. Next we will program the ESP8266. Connect a USB cable between your ESP8266 and your computer.
+    Load the provided New_BME_Sensor.ino file into the Arduino IDE. Your BME280 sensor should be hooked to D3 (SDA) & D4 (SCL) on the ESP8266 and the Wire.h library included.
     Enter your "ESP8266-NodeMCU-12E-BME280" "Write Key" "Wireless SSID" & "Password" into the correct section of the sketch.
     Then click menu item "Sketch" &  "Upload". After you upload the sketch to your ESP8266 you can open the serial window and see your data print out after 5 Minutes, every 5 Minutes.
     The data gets sent to thingspeak at 5 min intervals so it will be some time before you have meaningful chart data but you should have gauge readings after 5 min.
@@ -44,9 +51,10 @@
             You can also have a fourth gauge (as seen in the screenshots) from another sensor from another channel but I have commeted out the relevant portions. If you feel savy, hook it up.
             There is also some timing issues to be aware of. You likely will not have the absolute most current data but it should always be less than 10 Minutes old.
             This comes from when the timing control gets fired, When the data was sent from the ESP8266 and when you loaded / refreshed the web page.
+            
+            
 
-            Linux users may have to change ownwership of the USB port to communicate with the /dev/ttyUSB0
-            as in 'sudo chown yourusername /dev/ttyUSB0' or what ever you selected as your port in setup.
+            Linux users may have to change ownwership of the USB port to communicate with the /dev/ttyUSB0 as in 'sudo chown yourusername /dev/ttyUSB0' or what ever you selected as your port in setup.
             
 
     Get the .ino & .HTML code files here https://github.com/optio50/ESP8266-NodeMCU-12E-with-BME280
