@@ -72,7 +72,7 @@
     Save TimeControl.
 
 
-
+Open the provided ESP8266-NodeMCU-12E-BME280.html file in your web browser and you should see the gauges and chart populated.
 
     
 
