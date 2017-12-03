@@ -55,7 +55,8 @@ function drawChart() { // the rest of the script is this function
     });
 
     ////////////////////////////////// Setup the Charts  //////////////////////////////////////
-
+var formatter = new google.visualization.DateFormat({pattern: 'EEE d MMM yyyy h:mm a'});
+formatter.format(chartData2, 0);
     var ChartOptions2 = {
 	title: 'ESP8266 NodeMCU BME280 ' + TypeofChart + ' Chart',
 	titleTextStyle: {color: 'blue'},
