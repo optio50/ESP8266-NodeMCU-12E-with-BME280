@@ -12,7 +12,7 @@
  9. Name the MATLAB Analysis something like "Calculate Min Max Since Midnight".
 10. Copy the MATLAB Analysis.txt code into the provided space. Enter the "channel ID" for "ESP8266-NodeMCU-12E-BME280" into "readChannelID".
     Enter the "BME280 Daily High Low Data" Write "Channel ID" & "Write Key" in to writeNewChannelID & writeAPIKey respectivly.
-    I know it sounds confusing (read it again). Click save and run. If you did it correcty and the read channel  is public you will see no errors and it successfully prints the values.
+    I know it sounds confusing (read it again). Click save and run. If you did it correcty and the read channel  is public you will see no errors and it successfully prints the values. (might have errors as you have not uploaded any data yet, You can recheck this sep after data has been uploaded several times)
 11. Next we need to create a "Time Control" to fire this code every 5 min and our data gets written to the channel "BME280 Daily High Low Data".
     From the main page of "BME280 Daily High Low Data" select Apps at the top. Under actions select "TimeControl" then the Green button "New TimeControl".
     Name it something like "Send High Low Temps ESP8266". Select your time zone if needed and select "Recurring" under Frequency.
