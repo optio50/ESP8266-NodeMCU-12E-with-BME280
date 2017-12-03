@@ -71,12 +71,11 @@
     Select Minute under Recurrence. Set to run every 5 Minutes. Action should be MATLAB Analysis and "Code to Execute" is "Calculate Min Max Since Midnight".
     Save TimeControl.
 
+Edit the HTML files and look for comments that say "******** Change Me 1 of 8 *********" Change these to your preference.
 
 Open the provided ESP8266-NodeMCU-12E-BME280.html file in your web browser and you should see the gauges and chart populated.
-
-    
-
-    Notes: Some of the text fields and the weekly chart will not populate correctly until you have a full day and full week of data for the 24 Hr and Week section and chart.
+   
+   Notes: Some of the text fields and the weekly chart will not populate correctly until you have a full day and full week of data for the 24 Hr and Week section and chart.
             Once you have a bunch of data you can zoom in on the charts with the mouse wheel (Right Click to Reset).
             You can also have a fourth gauge (as seen in the screenshots) from another sensor from another channel but I have commeted out the relevant portions. If you feel savy, hook it up.
             There is also some timing issues to be aware of. You likely will not have the absolute most current data but it should always be less than 5 Minutes old.
