@@ -22,11 +22,11 @@ var chartInterval; // Chart Auto Refresh Variable
 var Gauge1;
 var Gauge2;
 var Gauge3;
-var key1 = 'XXXXXXXXXXXXXXXX';	// Your ThingSpeak BME280 API Read Key
-var key2 = 'XXXXXXXXXXXXXXXX';	// Your ThingSpeak High Low Data API Read Key. A new channel should be created to hold your high low data.
-var chan1 = 'XXXXXX';		// Your ThingSpeak BME280 Channel Number
-var chan2 = 'XXXXXX';		// Your Thingspeak High Low Data Channel Number. A new channel should be created to hold your high low data.
-var offset = '-5';		// Timezone Offset. - or + number as in  '-5'
+var key1 = 'XXXXXXXXXXXXXXXX';	//******** Change Me 1 of 8 *********	// Your ThingSpeak BME280 API Read Key
+var key2 = 'XXXXXXXXXXXXXXXX';	//******** Change Me 2 of 8 *********	// Your ThingSpeak High Low Data API Read Key. A new channel should be created to hold your high low data.
+var chan1 = 'XXXXXX';		//******** Change Me 3 of 8 *********	// Your ThingSpeak BME280 Channel Number
+var chan2 = 'XXXXXX';		//******** Change Me 4 of 8 *********	// Your Thingspeak High Low Data Channel Number. A new channel should be created to hold your high low data.
+var offset = '-5';		//******** Change Me 5 of 8 *********	// Timezone Offset. - or + number as in  '-5'
 
 //--------------------Begin Optional 4th Gauge Variables-------------------------//
 
@@ -109,7 +109,7 @@ function init() {	// Thingspeak channel that keeps BME280 Data
           lcdDecimals: 0,
           section: null,
           area: null,
-          titleString: 'My Location',
+          titleString: 'My Location',	//******** Change Me 6 of 8 *********
           unitString: 'Temp °F',
           threshold: 80,
           thresholdVisible: false,
@@ -135,7 +135,7 @@ function init() {	// Thingspeak channel that keeps BME280 Data
           lcdDecimals: 0,
           section: null,
           area: null,
-          titleString: 'My Location',
+          titleString: 'My Location',	//******** Change Me 7 of 8 *********
           unitString: 'Humidity %',
           threshold: 50,
           thresholdVisible: false,
@@ -161,7 +161,7 @@ function init() {	// Thingspeak channel that keeps BME280 Data
           lcdDecimals: 0,
           section: null,
           area: null,
-          titleString: 'My Location',
+          titleString: 'My Location',	//******** Change Me 8 of 8 *********
           unitString: 'Pressure Inch Hg',
           threshold: 100,
           thresholdVisible: false,
