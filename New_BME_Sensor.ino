@@ -16,7 +16,7 @@ char pressureString[7];
 char pressureInchString[6];
 
 Adafruit_BME280 bme; // I2C
-// replace with your channel’s thingspeak API write key,
+// replace with your "ESP8266-NodeMCU-12E-BME280" (The first channel you created) channel’s thingspeak API write key,
 String apiKey = "XXXXXXXXXXXXXXXXX";
 // replace with your routers SSID
 const char* ssid = "XXXXXXXXXXXXXXXXX";
