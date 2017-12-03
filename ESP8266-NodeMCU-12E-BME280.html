@@ -60,10 +60,7 @@ function init() {	// Thingspeak channel that keeps BME280 Data
         document.getElementById('Pmax').innerHTML = data2.field5; // Today's Pressure High Data
         document.getElementById('Pmin').innerHTML = data2.field6; // Today's Pressure Low Data
         document.getElementById("Updated").innerHTML = moment().format('ddd LL h:mm:ss A'); // Time Stamp Chart & Gauges Refreshed
-	document.getElementById('Last1').innerHTML = moment(data.created_at, 'YYYY-MM-DDTHH:mm:ssZ').format('LTS');	// Converted Thingspeak Time Stamp of Gauge & Chart Data        
-	document.getElementById('Last2').innerHTML = moment(data2.created_at, 'YYYY-MM-DDTHH:mm:ssZ').format('LTS');	// Converted Thingspeak Time Stamp of High Low Data
-/*        document.getElementById('Last3').innerHTML = moment(data3.created_at, 'YYYY-MM-DDTHH:mm:ssZ').format('LTS');	// Converted Thingspeak Time Stamp of Optional Gauge Data
-*/
+	
 
 
 
