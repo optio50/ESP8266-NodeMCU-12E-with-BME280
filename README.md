@@ -23,8 +23,6 @@ Micro USB cable, Free if you have one already
 
 Arduino IDE, Free Download
 
-Get the .ino & .HTML code files here https://github.com/optio50/ESP8266-NodeMCU-12E-with-BME280
-
 
 1. Create a free Thingspeak account and new channel at https://thingspeak.com , Call the channel "ESP8266-NodeMCU-12E-BME280"
 
@@ -86,7 +84,3 @@ Some of the text fields and the weekly chart will not populate correctly until y
 Once you have a bunch of data you can zoom in on the charts with the mouse wheel (Right Click to Reset). You can also have a fourth gauge (as seen in the screenshots) from another sensor from another channel but I have commeted out the relevant portions. If you feel savy, hook it up. There is also some timing issues to be aware of. You likely will not have the absolute most current data but it should always be less than 5 Minutes old. This comes from when the timing control gets fired, When the data was sent from the ESP8266 and when you loaded / refreshed the web page.
 
 Open the provided ESP8266-NodeMCU-12E-BME280.html file in your web browser and you should see the gauges and chart populated.
-
-Get the .ino & .HTML code files here https://github.com/optio50/ESP8266-NodeMCU-12E-with-BME280
-
-
